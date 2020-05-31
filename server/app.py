@@ -18,15 +18,15 @@ app.add_url_rule("/", "update", update)
 
 @app.route('/add_biz', methods=['POST'])
 def add_biz():
-    print('hi')
     name = request.values.get('name')
-    address = request.values.get('address')
-    hours = request.values.get('hours')
-    phone = request.values.get('phone')
-    website = request.values.get('website')
-    message = request.values.get('message')
-    bizlist.insert({'name':name, 'address':address, 'hours':hours,
-    'phone':phone, 'website':website, 'message':message})
+    # address = request.values.get('address')
+    # hours = request.values.get('hours')
+    # phone = request.values.get('phone')
+    # website = request.values.get('website')
+    # message = request.values.get('message')
+    bizlist.insert({'name':name })
+    # 'address':address, 'hours':hours,
+    # 'phone':phone, 'website':website, 'message':message
     return redirect('/')
 
 @app.route('/remove_biz')
