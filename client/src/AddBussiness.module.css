@@ -20,10 +20,12 @@
 }
 
 .registerButton {
-  background-color: #0074a3;
+  /* background-color: #0074a3; */
+  background-color: #017bff;
   border: none;
   width: 40%;
   margin: 2% 1.75%;
+  margin-bottom: 30px;
   border-radius: 6px;
   /* float: right; */
   display: inline-block;

@@ -3,8 +3,10 @@ import { Dropdown, DropdownButton, Form, Button } from 'react-bootstrap';
 import states from './arrayOfStates';
 import counties from './arrayOfCounties';
 import typesOfBusiness from './arrayTypesOfBusiness';
+import { useHistory } from 'react-router';
 
 export default () => {
+  let history = useHistory();
   const [state, setState] = useState('');
   const [county, setCounty] = useState('');
   const [business, setBusiness] = useState('');
@@ -23,7 +25,7 @@ export default () => {
   return (
     <div className="container">
       <header style={{ textAlign: 'center' }}>
-        <h1>See Which Businesses Are Open</h1>
+        <h1>Find Open Businesses Near You</h1>
       </header>
       <Form>
         <Form.Group controlId="ControlSelect1">
@@ -64,9 +66,9 @@ export default () => {
         <Button
           variant="primary"
           size="lg"
-          style={{ width: '70%' }}
+          style={{ width: '70%', marginBottom: '165px' }}
           onClick={e => {
-            console.log(state, county, business);
+            history.push('/business');
           }}
         >
           Go

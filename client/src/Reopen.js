@@ -7,9 +7,16 @@ export default () => {
       className="container"
       style={{ textAlign: 'center', marginBottom: '40px' }}
     >
-      <h1>Considering whether to reopen?</h1>
+      <h1>
+        Considering{' '}
+        <span style={{ color: 'orange' }}>
+          <strong>reopening</strong>
+        </span>
+        ?
+      </h1>
+      <h2>Let us help</h2>
       <Button variant="primary" size="lg" style={{ width: '70%' }}>
-        Compare to our database
+        Compare with our community
       </Button>
     </div>
   );
