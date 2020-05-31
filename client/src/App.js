@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import OpenBusiness from './OpenBusiness';
+import ForBusiness from './ForBusiness';
+import Reopen from './Reopen';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header style={{ textAlign: 'center', margin: '30px 20px 70px 20px' }}>
+        <h1>REOPENER</h1>
       </header>
+      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+        <div style={{ width: '40%' }}>
+          <OpenBusiness />
+        </div>
+        <div
+          style={{
+            width: '50%'
+          }}
+        >
+          <ForBusiness style={{}} />
+          <Reopen />
+        </div>
+      </div>
     </div>
   );
 }
